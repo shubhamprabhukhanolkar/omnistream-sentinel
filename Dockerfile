@@ -32,8 +32,8 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 WORKDIR /app
 
 # Install backend dependencies
-COPY backend/pyproject.toml ./
-RUN uv pip install --system -r <(uv pip compile pyproject.toml) || uv pip install --system -e .
+COPY backend/pyproject.toml backend/requirements.txt ./
+RUN uv pip install --system -r requirements.txt
 
 # Copy backend application source
 COPY backend/app ./app
