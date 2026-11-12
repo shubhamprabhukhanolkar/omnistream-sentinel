@@ -1,0 +1,119 @@
+name: Deploy OmniStream Sentinel to Google Cloud Run
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+env:
+  PROJECT_ID: slabspro-slabsuser37
+  REGION: asia-south1
+  GAR_REPOSITORY: omnistream-repo
+  SERVICE_NAME: omnistream-sentinel
+  IMAGE_NAME: asia-south1-docker.pkg.dev/slabspro-slabsuser37/omnistream-repo/omnistream-sentinel
+
+jobs:
+  test-and-lint:
+    name: Run Automated Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+          enable-cache: true
+
+      - name: Set up Python 3.12
+        run: uv python install 3.12
+
+      - name: Run Backend Pytest Suite
+        run: |
+          cd backend
+          uv sync --all-extras
+          uv run pytest -v
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build Frontend Test
+        run: |
+          cd frontend
+          npm ci || npm install
+          npm run build
+
+  deploy:
+    name: Build Docker & Deploy to Google Cloud Run
+    needs: test-and-lint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 1: Authenticate to GCP using google-github-actions/auth@v2
+      - name: Authenticate to Google Cloud
+        id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+
+      # Step 2: Set up Cloud SDK
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          version: '>= 460.0.0'
+
+      # Step 3: Configure Docker Authentication for asia-south1 Artifact Registry
+      - name: Configure Docker Auth
+        run: |
+          gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
+
+      # Step 4: Ensure Artifact Registry Repository Exists
+      - name: Ensure Artifact Registry Repository Exists
+        run: |
+          gcloud artifacts repositories describe ${{ env.GAR_REPOSITORY }} \
+            --location=${{ env.REGION }} \
+            --project=${{ env.PROJECT_ID }} --quiet || \
+          gcloud artifacts repositories create ${{ env.GAR_REPOSITORY }} \
+            --repository-format=docker \
+            --location=${{ env.REGION }} \
+            --description="Docker repository for OmniStream Sentinel" \
+            --project=${{ env.PROJECT_ID }} --quiet
+
+      # Step 5: Build and Push Docker Image
+      - name: Build and Push Docker Image
+        run: |
+          IMAGE_TAG="${{ env.IMAGE_NAME }}:${{ github.sha }}"
+          LATEST_TAG="${{ env.IMAGE_NAME }}:latest"
+          echo "Building single-container image: $IMAGE_TAG"
+          docker build \
+            --tag "$IMAGE_TAG" \
+            --tag "$LATEST_TAG" \
+            --file Dockerfile .
+          
+          echo "Pushing images to Artifact Registry..."
+          docker push "$IMAGE_TAG"
+          docker push "$LATEST_TAG"
+
+      # Step 6: Deploy to Google Cloud Run
+      - name: Deploy to Google Cloud Run
+        id: deploy
+        uses: google-github-actions/deploy-cloudrun@v2
+        with:
+          service: ${{ env.SERVICE_NAME }}
+          region: ${{ env.REGION }}
+          image: ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          flags: '--allow-unauthenticated --port=8080 --memory=2Gi --cpu=2 --timeout=300s --set-env-vars=GCP_PROJECT=slabspro-slabsuser37,GCP_REGION=asia-south1,VERTEX_MODEL=gemini-3-flash-preview,STATIC_DIR=/app/static'
+
+      # Step 7: Output Service URL
+      - name: Service URL Output
+        run: |
+          echo "OmniStream Sentinel successfully deployed to: ${{ steps.deploy.outputs.url }}"

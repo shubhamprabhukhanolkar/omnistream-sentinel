@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary":"#003e5d","surface-container-low":"#f6f2ff","surface-dim":"#dad7f6","on-surface":"#1a192f","on-secondary-fixed":"#321200","surface-container-highest":"#e3dffe","background":"#fcf8ff","on-tertiary":"#ffffff","error":"#ba1a1a","on-secondary":"#ffffff","on-secondary-container":"#6d3000","on-tertiary-fixed-variant":"#004b70","error-container":"#ffdad6","primary-container":"#9d1d27","tertiary-fixed-dim":"#8ccdff","tertiary-fixed":"#cae6ff","secondary-container":"#fc934f","on-error-container":"#93000a","surface-container-high":"#e9e5ff","on-tertiary-fixed":"#001e30","surface-container-lowest":"#ffffff","surface-variant":"#e3dffe","inverse-surface":"#2f2e45","inverse-primary":"#ffb3b0","on-primary":"#ffffff","inverse-on-surface":"#f2eeff","on-primary-container":"#ffafac","outline-variant":"#e0bfbd","on-background":"#1a192f","primary-fixed-dim":"#ffb3b0","primary":"#7a0014","on-tertiary-container":"#86cbff","surface":"#fcf8ff","on-error":"#ffffff","on-secondary-fixed-variant":"#753400","primary-fixed":"#ffdad8","surface-bright":"#fcf8ff","on-primary-fixed-variant":"#8e101e","surface-tint":"#b02c33","on-surface-variant":"#594140","on-primary-fixed":"#410006","secondary-fixed":"#ffdbc9","outline":"#8d706f","secondary-fixed-dim":"#ffb68c","secondary":"#994703","surface-container":"#efebff","tertiary-container":"#00567f"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"1rem","gutter-mobile":"1rem","margin":"2rem","space-sm":"0.5rem","space-lg":"1.5rem","gutter":"1.5rem","space-xs":"0.25rem","margin-mobile":"1rem","space-xl":"2.5rem"},"fontFamily":{"label-sm":["Inter"],"headline-md":["Inter"],"body-sm":["Inter"],"label-md":["Inter"],"headline-sm":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Inter"],"headline-xl":["Inter"],"headline-xl-mobile":["Inter"],"label-lg":["Inter"]},"fontSize":{"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(37,36,59,0.06)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="First Heritage Financial Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCg3Mg0uTlsn7oaEKNA1DeHxcWPZNxv51X3aoDQXZn4gvHQp9dvNSPqkXB9OV5h0x6RyQuw7fWu1nTVddUSP25qJHzfE85r3y9Kv-EU57enpgb-h_GJMUnEEtxHuUeFNzM9IPCqRuYburRR-JGjtvereV9GMi1FaaHNt7XTyu7CLusdmhChpRJx-bsHnQ63s8Ux_Kw9uzRJM-3FnA49Uyfcx5mg0kz_v02TL7fnXlw"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary uppercase tracking-tight">First Heritage</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-space-xs py-0.5 rounded">Production Ops</span></div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">AI Core: Operational - Sentinel QA Active</span></div></div></div><div class="hidden xl:flex items-center gap-space-lg bg-surface-container-low px-space-md py-space-xs rounded-lg"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">Freed Today:</span><span class="font-label-md text-label-md text-on-surface">42.4 hrs</span></div><div class="w-px h-4 bg-outline-variant"></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">Active Cases:</span><span class="font-label-md text-label-md text-on-surface">148</span></div><div class="w-px h-4 bg-outline-variant"></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">Adoption:</span><span class="font-label-md text-label-md text-secondary">95.2%</span></div></div><div class="flex items-center gap-space-md"><div class="relative hidden md:block w-64"><input class="w-full h-9 pl-8 pr-space-sm bg-surface-container text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search cases, CIF, or telemetry..." type="text"/><span class="material-symbols-outlined absolute left-2 top-2 text-on-surface-variant text-[18px]">search</span></div><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span></button><button class="p-space-xs text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined">tune</span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX8nXiVUnLf7QlfokkwGbd_D4AhsiGtowZRsXrcJUgDTI8WBLfPIoqtMuUWnecb2bNXsnsn7xL_tvIb8anv9lVFz6CBuv9mNKpKT46QnW2Qeoc6RuMAUkeSIbsovK8R6394Y6Syiy-lJluTXoPwt7iEXefFRsCnvYcoUtjYaL0eu1-y5LbIdY0N6ph95HK1PTkPD1BeZTdbudaAjJTnxcQ_brBJlSsNpsxjdSPcVw"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-none">Operations Lead</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Tier 1 Executive</span></div></div></div></div></header><aside class="fixed left-0 top-20 bottom-0 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(37,36,59,0.04)] z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Pipeline Stages</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg transition-colors bg-primary-container text-on-primary font-semibold shadow-sm" data-path="omnichannel-intake" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-label-md text-label-md">1. Omnichannel Intake</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="drafter-agent" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-label-md text-label-md">2. Drafter Agent</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="sentinel-critic" href="#"><span class="material-symbols-outlined text-[20px]">gavel</span><span class="font-label-md text-label-md">3. Sentinel Critic</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="agent-workspace" href="#"><span class="material-symbols-outlined text-[20px]">desktop_windows</span><span class="font-label-md text-label-md">4. Agent Workspace</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="shift-capacity" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-label-md text-label-md">5. Shift & Capacity</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="cfo-financials" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-label-md text-label-md">6. CFO Financials</span></a></nav></div><div class="px-space-sm"><div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">SLA Health</span><span class="font-label-sm text-label-sm text-secondary font-bold">99.8%</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-secondary h-full w-[99.8%]"></div></div><div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm"><span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Sync Live</span><span>v4.12 Enterprise</span></div></div></div></aside><div class="pl-64"><main class="pt-20 w-full min-h-screen bg-background"><div class="flex flex-col w-full">
+<div class="p-gutter flex flex-col gap-space-lg max-w-[1540px] mx-auto w-full">
+<!-- Header & Telemetry Matrix -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold bg-primary-fixed px-space-xs py-0.5 rounded">Intake Subsystem 01</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span> Live Kafka Event Bus
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Omnichannel Ingestion & Smart Dispatcher</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+          Real-time dual-stream payload normalizer and zero-latency routing layer. Raw acoustic telephony and encrypted MIME payloads are dynamically ingested, parsed, and orchestrated into high-throughput LLM pipelines.
+        </p>
+</div>
+<!-- Live KPI Pills -->
+<div class="grid grid-cols-3 gap-space-sm bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex flex-col px-space-md py-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Today Ingested</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-headline-md text-headline-md text-primary font-bold">1,842</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">trending_up</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">+14.2% vs baseline</span>
+</div>
+<div class="flex flex-col px-space-md py-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-Classified</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">99.4%</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 flagged human review</span>
+</div>
+<div class="flex flex-col px-space-md py-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avg Routing Latency</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-headline-md text-headline-md text-secondary font-bold">140<span class="text-label-md font-normal text-on-surface-variant">ms</span></span>
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">p99 = 192ms</span>
+</div>
+</div>
+</div>
+<!-- Central Neural Visualizer & Dispatch Node -->
+<div class="relative w-full rounded-xl bg-surface-container-lowest p-space-lg shadow-sm overflow-hidden">
+<!-- Background Ambient Glows -->
+<div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-secondary-container/15 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-96 h-96 rounded-full bg-tertiary-fixed-dim/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">alt_route</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Neural Orchestrator Node</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bi-directional token mapping & automated context assembly engine</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Active Parallel Clusters: 8/8</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bandwidth</span>
+<p class="font-label-md text-label-md text-on-surface font-bold">42.8 MB/s</p>
+</div>
+</div>
+</div>
+<!-- Orchestrator Topology Canvas -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-md items-center py-space-sm">
+<!-- Ingestion Ports Left -->
+<div class="col-span-1 md:col-span-2 flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-secondary-container/30 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block">Whisper-v3 Cluster</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Real-time PCM stream transcribing</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">412 calls/hr</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-tertiary-fixed text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">mark_email_read</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block">MIME Thread NLP Engine</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">HTML parser & attachment OCR</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">890 msgs/hr</span>
+</div>
+</div>
+<!-- Pulsing Center Core -->
+<div class="col-span-1 flex flex-col items-center justify-center relative py-space-sm">
+<div class="relative flex items-center justify-center">
+<!-- Pulsing Ring -->
+<div class="absolute w-24 h-24 rounded-full bg-secondary-container/20 animate-ping"></div>
+<div class="relative w-20 h-20 rounded-full bg-primary-container text-on-primary flex flex-col items-center justify-center shadow-lg cursor-pointer transform hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[30px]">memory</span>
+<span class="font-label-sm text-label-sm font-bold tracking-tight">FH-CORE</span>
+</div>
+</div>
+<span class="mt-space-xs font-label-sm text-label-sm text-primary font-bold">Zero-Shot Dispatch</span>
+</div>
+<!-- Target Inference Queues Right -->
+<div class="col-span-1 md:col-span-2 flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block">Priority HNW & Esc. Buffer</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Zero wait · Ultra tier dedicated</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-primary text-on-primary px-space-xs py-0.5 rounded font-bold">12 cases</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">model_training</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block">Drafter v4 Synthesizer</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">General resolution drafting agent</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">94 queued</span>
+</div>
+</div>
+</div>
+<!-- Orchestrator Micro-telemetry bar -->
+<div class="pt-space-xs flex flex-wrap items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<span>Core Version: <strong class="text-on-surface">v3.4.19b-orchestrator</strong></span>
+<span>Active Shards: <strong class="text-on-surface">16 node cluster</strong></span>
+<span>Packet Loss: <strong class="text-secondary">0.000%</strong></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span>Model Consensus: 99.82% Confidence Threshold</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter Bar & Channel Selector -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- Filter Segmented Chips -->
+<div class="flex items-center flex-wrap gap-space-xs w-full md:w-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mr-space-xs">Channels:</span>
+<button class="px-space-sm py-1 rounded bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 shadow-sm">
+<span>All Channels</span>
+<span class="bg-primary-container px-1 py-0.2 rounded text-[10px]">148</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">headset_mic</span>
+<span>Audio Call</span>
+<span class="bg-surface-container-high px-1 py-0.2 rounded text-[10px] text-on-surface-variant">54</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-tertiary">mail</span>
+<span>Email Thread</span>
+<span class="bg-surface-container-high px-1 py-0.2 rounded text-[10px] text-on-surface-variant">72</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">chat</span>
+<span>WhatsApp Web</span>
+<span class="bg-surface-container-high px-1 py-0.2 rounded text-[10px] text-on-surface-variant">22</span>
+</button>
+</div>
+<!-- Secondary Filters & Actions -->
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-end">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sentiment Risk:</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface outline-none cursor-pointer">
+<option>All Tiers</option>
+<option>Critical Escalation</option>
+<option>Negative Sentiment</option>
+<option>Neutral / Inquisitive</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SLA State:</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface outline-none cursor-pointer">
+<option>Active / In-Window</option>
+<option>Breached (>15m)</option>
+<option>Near Breach (<3m)</option>
+</select>
+</div>
+<button class="p-2 rounded bg-surface-container-low hover:bg-surface-container-high text-on-surface transition-colors" title="Force Refresh Pipeline">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</button>
+</div>
+</div>
+<!-- 3-Column Stream Pipeline -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md items-start">
+<!-- COLUMN 1: Raw Incoming Streams -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low/60 p-space-md rounded-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-3 h-3 rounded-full bg-secondary-container animate-pulse"></div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">1. Incoming Raw Streams</h3>
+</div>
+<span class="font-label-sm text-label-sm font-semibold bg-surface-container-high text-on-surface px-space-xs py-0.5 rounded">3 Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pb-space-xs">Unprocessed ingress buffers arriving from telephony trunks & mail gateways.</p>
+<!-- Card 1: Audio Call -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">graphic_eq</span> Audio Call
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">00:02:14</span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">warning</span> High Sentiment Risk
+            </span>
+</div>
+<div>
+<div class="flex items-baseline justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">+1 (415) 890-2104</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CIF #8942109</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium">Rajiv Singhania (Private Wealth Client)</span>
+</div>
+<!-- Audio Waveform Visualization Simulation -->
+<div class="bg-surface-container-low p-space-xs rounded flex items-center gap-1 h-8 px-space-sm">
+<div class="h-3 w-1 bg-secondary rounded-full animate-bounce"></div>
+<div class="h-6 w-1 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.1s;"></div>
+<div class="h-4 w-1 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+<div class="h-7 w-1 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.3s;"></div>
+<div class="h-5 w-1 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.4s;"></div>
+<div class="h-2 w-1 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+<div class="h-6 w-1 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.1s;"></div>
+<div class="h-4 w-1 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.5s;"></div>
+<span class="ml-auto font-label-sm text-label-sm text-on-surface-variant">Streaming via Twilio SIP</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span>Buffer Wait: <strong class="text-on-surface">1.2s</strong></span>
+<span class="text-secondary font-medium">Auto-connecting to STT...</span>
+</div>
+</div>
+<!-- Card 2: Email Thread -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary"></div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">mail</span> Email Thread
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14:02:18 EST</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-1.5 py-0.5 rounded">3 Attachments</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block truncate">c.vanderbilt@apexcapital.org</span>
+<span class="font-body-sm text-body-sm text-on-surface line-clamp-1">Urgent: Wire Transfer #WT-890048 Discrepancy on FX Settlement</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 bg-surface-container-low p-space-xs rounded">
+            "We initiated an outbound remittance of $420,000 to Zurich clearing yesterday. Confirmation statement shows an un-notified correspondent fee deduction..."
+          </p>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span>Queue Wait: <strong class="text-on-surface">0.8s</strong></span>
+<span class="text-tertiary font-medium">Ready for Ingestion →</span>
+</div>
+</div>
+<!-- Card 3: WhatsApp Ingress -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">chat</span> WhatsApp
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14:03:01 EST</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Standard SLA</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block">+91 98401 22891</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Retail Customer · Current Acc</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 bg-surface-container-low p-space-xs rounded">
+            "Hello, my debit card has been blocked at the London Heathrow terminal. Can someone unfreeze international POS limits?"
+          </p>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span>Buffer Wait: <strong class="text-on-surface">0.4s</strong></span>
+<span class="text-primary font-medium">Payload parsing...</span>
+</div>
+</div>
+</div>
+<!-- COLUMN 2: Classification & Diarization Engine -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low/60 p-space-md rounded-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-3 h-3 rounded-full bg-primary animate-pulse"></div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">2. Orchestrator Analysis & Ingestion</h3>
+</div>
+<span class="font-label-sm text-label-sm font-semibold bg-primary text-on-primary px-space-xs py-0.5 rounded">Processing Live</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pb-space-xs">Real-time diarization, CIF retrieval, intent deduction & token alignment.</p>
+<!-- In-flight Case 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm font-bold text-primary">CASE-98124</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">| Audio Stream</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-primary px-space-xs py-0.5 rounded font-bold">99.1% Confidence</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Speaker Diarization:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">2 Speakers Detected</span>
+</div>
+<!-- Acoustic Timeline -->
+<div class="flex items-center gap-1 w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[35%]"></div>
+<div class="bg-primary h-full w-[15%]"></div>
+<div class="bg-secondary h-full w-[50%]"></div>
+</div>
+<div class="flex justify-between text-[10px] text-on-surface-variant font-label-sm">
+<span>Customer (Singhania)</span>
+<span>IVR Gate</span>
+<span>Customer</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Extracted Intent Vectors:</span>
+<div class="flex flex-wrap gap-1">
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface">#disputed_fx_fee</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface">#wire_settlement</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-semibold">#high_churn_risk</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between border-t border-surface-container-high">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">psychology</span>
+<span class="font-label-sm text-label-sm text-on-surface">Drafter Model Assigned:</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">FH-Wealth-v4</span>
+</div>
+</div>
+<!-- In-flight Case 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm font-bold text-primary">CASE-98125</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">| Email Ingestion</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-tertiary px-space-xs py-0.5 rounded font-bold">98.8% Confidence</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Attachment Parser:</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">OCR Processed</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">description</span>
+<span class="truncate">wire_receipt_zurich_489.pdf (Extracted 4 Tables)</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Categorization Vector:</span>
+<div class="flex flex-wrap gap-1">
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface">#commercial_banking</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface">#nostro_vostro</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between border-t border-surface-container-high">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">psychology</span>
+<span class="font-label-sm text-label-sm text-on-surface">Drafter Model Assigned:</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">FH-Treasury-v2</span>
+</div>
+</div>
+</div>
+<!-- COLUMN 3: Routed to AI Summarization Queue -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low/60 p-space-md rounded-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-3 h-3 rounded-full bg-tertiary"></div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">3. Routed to Summarization</h3>
+</div>
+<span class="font-label-sm text-label-sm font-semibold bg-surface-container-high text-on-surface px-space-xs py-0.5 rounded">4 Enqueued</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pb-space-xs">Normalized payloads staged for Drafter Agent dynamic synthesis.</p>
+<!-- Queue Item 1: High Net Worth Priority -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow relative">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded font-label-sm text-label-sm bg-primary text-on-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> High Net Worth Tier
+            </span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Priority #1</span>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">CASE-98120</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SLA: 02m 40s left</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-semibold">Sterling Group Holding Co.</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Multi-currency line of credit restructuring memo requested for board meet.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-low px-space-sm py-1.5 rounded">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">smart_toy</span>
+<span class="font-label-sm text-label-sm text-on-surface">Target Drafter: <strong>Agent 04 (Ops)</strong></span>
+</div>
+<button class="font-label-sm text-label-sm bg-primary text-on-primary px-space-sm py-1 rounded font-semibold hover:bg-primary-container transition-colors">
+              Dispatch
+            </button>
+</div>
+</div>
+<!-- Queue Item 2: Regulatory Escalation -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow relative">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded font-label-sm text-label-sm bg-error-container text-on-error-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">gavel</span> Regulatory Escalation
+            </span>
+<span class="font-label-sm text-label-sm text-error font-semibold">Compliance Flag</span>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">CASE-98118</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SLA: 08m 10s left</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">FINRA Form 211 Inquiry Inbound</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Institutional broker audit record request regarding Q2 fixed income trades.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-low px-space-sm py-1.5 rounded">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">smart_toy</span>
+<span class="font-label-sm text-label-sm text-on-surface">Target Drafter: <strong>Sentinel Audit LLM</strong></span>
+</div>
+<button class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-space-sm py-1 rounded font-semibold hover:bg-surface-dim transition-colors">
+              Auto-Staged
+            </button>
+</div>
+</div>
+<!-- Queue Item 3: General Retail Inquiry -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow relative">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">help_center</span> General Retail
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Routine</span>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">CASE-98115</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SLA: 42m left</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Home Equity Pre-Approval Docs</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Verification of employer income tax slip and valuation deed.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-low px-space-sm py-1.5 rounded">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">smart_toy</span>
+<span class="font-label-sm text-label-sm text-on-surface">Target Drafter: <strong>Retail Retailer v2</strong></span>
+</div>
+<button class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-space-sm py-1 rounded font-semibold hover:bg-surface-dim transition-colors">
+              Queued
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Routing Health & Live Event Stream Table -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ingress Event Log & Stream Health</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sub-millisecond packet telemetry from edge telephony & web hooks</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Cluster Health 100%
+          </span>
+<button class="px-space-sm py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">download</span> Export Telemetry
+          </button>
+</div>
+</div>
+<!-- Telemetry Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<th class="py-space-sm px-space-md rounded-l">Timestamp</th>
+<th class="py-space-sm px-space-md">Ingress Source</th>
+<th class="py-space-sm px-space-md">Sender Identifier</th>
+<th class="py-space-sm px-space-md">Assigned Vector</th>
+<th class="py-space-sm px-space-md">Inference Engine</th>
+<th class="py-space-sm px-space-md">Latency</th>
+<th class="py-space-sm px-space-md rounded-r text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-mono text-label-sm text-on-surface-variant">14:04:12.802</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[14px]">phone_in_talk</span> Telephony SIP
+                </span>
+</td>
+<td class="py-space-sm px-space-md font-medium text-on-surface">+1 (650) 412-8899</td>
+<td class="py-space-sm px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Securities Lending</span>
+</td>
+<td class="py-space-sm px-space-md text-on-surface font-mono text-label-sm">whisper-v3-large</td>
+<td class="py-space-sm px-space-md text-secondary font-mono font-medium">112 ms</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed font-bold">Dispatched</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-mono text-label-sm text-on-surface-variant">14:04:11.419</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[14px]">alternate_email</span> TLS Exchange
+                </span>
+</td>
+<td class="py-space-sm px-space-md font-medium text-on-surface">j.doe@firstheritage.com</td>
+<td class="py-space-sm px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Escrow Release</span>
+</td>
+<td class="py-space-sm px-space-md text-on-surface font-mono text-label-sm">fh-mime-v2</td>
+<td class="py-space-sm px-space-md text-secondary font-mono font-medium">144 ms</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed font-bold">Dispatched</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-sm px-space-md font-mono text-label-sm text-on-surface-variant">14:04:10.021</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[14px]">chat</span> WhatsApp API
+                </span>
+</td>
+<td class="py-space-sm px-space-md font-medium text-on-surface">+91 99203 10091</td>
+<td class="py-space-sm px-space-md">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Card Freeze</span>
+</td>
+<td class="py-space-sm px-space-md text-on-surface font-mono text-label-sm">fh-regex-intent</td>
+<td class="py-space-sm px-space-md text-secondary font-mono font-medium">42 ms</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface font-bold">Enqueued</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
